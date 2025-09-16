@@ -4,7 +4,7 @@
 docker run -d `
   -e POSTGRES_PASSWORD=nice1234 `
   -p 5432:5432 `
-  -v C:/github/crema-test-db/mount/pgdb_data `
+  -v C:/github/crema-test-db/mount/pgdb_data:/var/lib/postgresql/data `
   postgres:14.18
 
 # pgAdmin 컨테이너 실행

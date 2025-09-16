@@ -37,7 +37,7 @@ Docker Desktop 이 실행되어 있는 상태로 Powershell 에서 아래 명령
 docker run -d `
 -e POSTGRES_PASSWORD=nice1234 `
 -p 5432:5432 `
--v C:/github/crema-test-db/mount/pgdb_data `
+-v C:/github/crema-test-db/mount/pgdb_data:/var/lib/postgresql/data `
 postgres:14.18
 
 # (Optional: postgres dbms freeware)
