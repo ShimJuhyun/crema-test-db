@@ -19,11 +19,12 @@ def create_test_user():
     try:
         from auth import hash_password
         from user import User
+        # SQLModel.metadata.create_all(engine)
         with Session(engine) as session:
             # Create an test user
-            hashed_pw = hash_password("test")
+            hashed_pw = hash_password("user")
             test_user = User(
-                id="test",
+                id="user",
                 username="tester",
                 email="test@test.co.kr",
                 hashed_password=hashed_pw,

@@ -5,6 +5,12 @@ from sqlalchemy import create_engine, text
 from config import settings
 import json
 
+from database import create_db_and_tables, create_test_user, create_chips_sample_data_table
+from refresh_token import RefreshToken
+from chat import Chat
+from user import User
+from report import ReportArchive
+
 # Postgres 타입 매핑 함수
 def map_type(dtype):
     if dtype == 'DATE':
@@ -73,20 +79,20 @@ def create_data_table(table_name, data_df, layout_df):
 
 if __name__ == '__main__':
 
-    # print('★★★★★ Create DB ★★★★★')
-    # create_db_and_tables()
+    print('★★★★★ Create DB ★★★★★')
+    create_db_and_tables()
 
-    # print('★★★★★ Create User ★★★★★')
-    # create_test_user()
+    print('★★★★★ Create User ★★★★★')
+    create_test_user()
 
-    # layout_file_path = r"C:\github\crema-test-db\mount\raw_data\structured_report_data_schema_v001.csv"
-    # layout_df = pd.read_csv(layout_file_path, encoding="cp949")
+    layout_file_path = r"C:\github\crema-test-db\mount\raw_data\structured_report_data_schema_v001.csv"
+    layout_df = pd.read_csv(layout_file_path, encoding="cp949")
     
-    # data_file_path = r"C:\github\crema-test-db\mount\raw_data\structured_report_data_v001.csv"
-    # data_df = pd.read_csv(data_file_path)
-    # data_df['RCV_DT'] = pd.to_datetime(data_df['RCV_DT'].astype(str) + '01', format='%Y%m%d')
+    data_file_path = r"C:\github\crema-test-db\mount\raw_data\structured_report_data_v001.csv"
+    data_df = pd.read_csv(data_file_path)
+    data_df['RCV_DT'] = pd.to_datetime(data_df['RCV_DT'].astype(str) + '01', format='%Y%m%d')
 
-    # create_data_table('df_chips', data_df, layout_df)
+    create_data_table('df_chips', data_df, layout_df)
 
     layout_df = pd.read_parquet(r"C:\github\crema-test-db\mount\raw_data\chips_sample_202503_schema.parquet").rename(columns={'feature': '항목명', 'dtype': 'type'})
     data_df = pd.read_parquet(r"C:\github\crema-test-db\mount\raw_data\chips_sample_202503.parquet")
