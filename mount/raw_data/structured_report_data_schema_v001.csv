@@ -1,0 +1,34 @@
+항목명,항목설명,type,비고
+RCV_DT,접수일,DATE,3
+ASS_DTLS_MDL_ID,ASS세부모형식별자,STRING,48
+MIRT_ASS_LAST_LMT_AMT,중금리ASS최종한도금액,INT64,63
+MIRT_LAST_INRT,중금리최종금리,FLOAT64,70
+MIRT_US_LAST_APRVL_DSTNCTN_VAL,중금리US최종승인구분값,STRING,74
+HIRT_US_LAST_APRVL_DSTNCTN_VAL,고금리US최종승인구분값,STRING,75
+STRTG_APRVL_YN_VAL,전략승인여부값,STRING,105
+OKSIL_CNT,신청일 기준 3일내 OK저축 신용대출 개설건수,INT64,144
+OKSIL_AMT,신청일 기준 3일내 OK저축 신용대출 개설금액,INT64,145
+OKSIL_SAT,신청일 기준 3일내 OK저축 신용대출 한도충족 건수,INT64,146
+SBSIL_CNT,신청일 기준 3일내 저축은행업권(OK제외) 신용대출 개설건수,INT64,148
+SBSIL_AMT,신청일 기준 3일내 저축은행업권(OK제외) 신용대출 개설금액,INT64,149
+SBSIL_SAT,신청일 기준 3일내 저축은행업권(OK제외) 신용대출 한도충족 건수,INT64,150
+BASIL_CNT,신청일 기준 3일내 은행업권 신용대출 개설건수,INT64,152
+CASIL_CNT,신청일 기준 3일내 카드업권 신용대출 개설건수,INT64,156
+CPSIL_CNT,신청일 기준 3일내 캐피탈업권 신용대출 개설건수,INT64,160
+SBSILA_CNT,신청일 기준 3일내 저축은행업권 신용대출 개설건수,INT64,164
+SBSILA_AMT,신청일 기준 3일내 저축은행업권 신용대출 개설금액,INT64,165
+SBSILA_SAT,신청일 기준 3일내 저축은행업권 신용대출 한도충족 건수,INT64,166
+BM1_CNT,신청일 기준 3일내 BM1 신용대출 개설건수,INT64,168
+BM2_CNT,신청일 기준 3일내 BM2 신용대출 개설건수,INT64,172
+BM3_CNT,신청일 기준 3일내 BM3 신용대출 개설건수,INT64,176
+DBSIL_CNT,신청일 기준 3일내 대부업권 신용대출 개설건수,INT64,180
+OPEN_SIL_AMT,신청일 기준 3일내 업권별 개설금액,INT64,184
+TPERF0004,기준일 이후 6개월내(183일) 전은연 신용불량 등록 여부 (1/0),STRING,1536
+TPERF0006,기준일 이후 6개월내(183일) NICE 신용불량 등록 여부 (1/0),STRING,1538
+TPERF0059,기준일 이후 9개월내 NICE 단기연체 30일이상 경험 여부 (1/0),STRING,1550
+TPERF0062,기준일 이후 9개월내(274일) 전은연 신용불량 등록 여부 (1/0),STRING,1551
+TPERF0063,기준일 이후 9개월내(274일) NICE 신용불량 등록 여부 (1/0),STRING,1552
+TPERF0066,기준일 이후 12개월 내 개인회생신청정보 발생 여부(0/1)(신정원 기준)(퍼포먼스항목),STRING,1554
+TPERF0072,기준일 이후 1년내 파산면책 사유 발생 여부,STRING,1555
+TPERF0073,기준일 이후 1년내 신용회복 사유 발생 여부,STRING,1556
+TPERFC102,기준일 이후 6개월내 NICE 단기연체 최장연체일수(코로나회복 이력포함),INT64,1569

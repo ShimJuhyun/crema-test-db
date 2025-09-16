@@ -1,0 +1,13 @@
+sources:
+  my-pg-source:
+    kind: postgres
+    host: host.docker.internal
+    port: 5432
+    database: postgres
+    user: postgres
+    password: nice1234
+tools:
+  execute_sql_tool:
+    kind: postgres-execute-sql
+    source: my-pg-source
+    description: Use this tool to execute sql statement.
